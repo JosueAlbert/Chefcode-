@@ -1,0 +1,33 @@
+<ion-app>
+  <ion-menu contentId="main-content" swipeGesture="false">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div class="menu-header">
+        <h2>¡Hola, Nombre!</h2>
+      </div>
+      <ion-list>
+        <ion-item button routerLink="/perfilmovil">
+          <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+          <ion-label>Datos personales</ion-label>
+          <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item button routerLink="/pedidos-anteriores">
+          <ion-icon name="receipt-outline" slot="start"></ion-icon>
+          <ion-label>Pedidos anteriores</ion-label>
+          <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item button routerLink="/cerrar-sesion">
+          <ion-icon name="log-out-outline" slot="start"></ion-icon>
+          <ion-label>Cerrar sesión</ion-label>
+          <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>

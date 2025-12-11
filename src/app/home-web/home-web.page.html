@@ -1,0 +1,46 @@
+<div class="container">
+ 
+
+  <div class="main-content">
+    <div class="header">
+      <img src="https://mateogutierrez.neocities.org/ChefCode2Home.png" alt="Welcome" class="welcome-image">
+      <div class="welcome-text">
+        <h2>Bienvenido <p>{{ user.nombre }}</p></h2>
+      </div>
+    </div>
+
+    <div class="report">
+      <div class="report-item" (click)="cart()">
+        <img src="https://mateogutierrez.neocities.org/Pedidos2.jpg" alt="Pedidos" class="report-icon">
+        <p class="report-text">Pedidos</p>
+        <span class="report-count">1032</span>
+      </div>
+      <div class="report-item" (click)="calendar()">
+        <img src="https://mateogutierrez.neocities.org/Reservaciones2.jpg" alt="Reservaciones" class="report-icon">
+        <p class="report-text">Reservaciones</p>
+        <span class="report-count">207</span>
+      </div>
+      <div class="report-item" (click)="add()">
+        <img src="https://mateogutierrez.neocities.org/CrearProductos2.jpg" alt="Crear Producto" class="report-icon">
+        <p class="report-text">Crear Producto</p>
+        <span class="report-count">128</span>
+      </div>
+      <div class="report-item" (click)="create()">
+        <img src="https://mateogutierrez.neocities.org/EditarProductos2.jpg" alt="Editar Producto" class="report-icon">
+        <p class="report-text">Editar Producto</p>
+        <span class="report-count">128</span>
+      </div>
+      <div class="report-item" (click)="person()">
+        <img src="https://mateogutierrez.neocities.org/Perfiladmin2.jpg" alt="Surgery" class="report-icon">
+        <p class="report-text">Perfil </p>
+        <span class="report-count">48</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ion-footer>
+  <app-sidebar></app-sidebar>
+</ion-footer>
+
+

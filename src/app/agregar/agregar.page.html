@@ -1,0 +1,153 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <img src="https://mateogutierrez.neocities.org/Logo%20ChefCode.png" alt="Logo" class="logo">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Agregar domicilio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="form-container">
+    <form #domicilioForm="ngForm">
+      <ion-item lines="none">
+        <ion-label position="stacked" class="input-label">Código Postal</ion-label>
+        <ion-input
+          class="input-field"
+          type="text"
+          required
+          pattern="^[0-9]{5}$"
+          [(ngModel)]="codigoPostal"
+          name="codigoPostal"
+          #codigoPostalCtrl="ngModel">
+        </ion-input>
+        <ion-note *ngIf="codigoPostalCtrl.invalid && codigoPostalCtrl.touched" color="danger">
+          Código postal inválido. (5 dígitos)
+        </ion-note>
+      </ion-item>
+
+      <div class="input-row">
+        <ion-item lines="none">
+          <ion-label position="stacked" class="input-label">Estado</ion-label>
+          <ion-input
+            class="input-field"
+            type="text"
+            required
+            [(ngModel)]="estado"
+            name="estado"
+            #estadoCtrl="ngModel">
+          </ion-input>
+          <ion-note *ngIf="estadoCtrl.invalid && estadoCtrl.touched" color="danger">
+            Campo requerido.
+          </ion-note>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked" class="input-label">Ciudad</ion-label>
+          <ion-input
+            class="input-field"
+            type="text"
+            required
+            [(ngModel)]="ciudad"
+            name="ciudad"
+            #ciudadCtrl="ngModel">
+          </ion-input>
+          <ion-note *ngIf="ciudadCtrl.invalid && ciudadCtrl.touched" color="danger">
+            Campo requerido.
+          </ion-note>
+        </ion-item>
+      </div>
+
+      <ion-item lines="none">
+        <ion-label position="stacked" class="input-label">Colonia</ion-label>
+        <ion-input
+          class="input-field"
+          type="text"
+          required
+          [(ngModel)]="colonia"
+          name="colonia"
+          #coloniaCtrl="ngModel">
+        </ion-input>
+        <ion-note *ngIf="coloniaCtrl.invalid && coloniaCtrl.touched" color="danger">
+          Campo requerido.
+        </ion-note>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="stacked" class="input-label">Calle</ion-label>
+        <ion-input
+          class="input-field"
+          type="text"
+          required
+          [(ngModel)]="calle"
+          name="calle"
+          #calleCtrl="ngModel">
+        </ion-input>
+        <ion-note *ngIf="calleCtrl.invalid && calleCtrl.touched" color="danger">
+          Campo requerido.
+        </ion-note>
+      </ion-item>
+
+      <div class="input-row">
+        <ion-item lines="none">
+          <ion-label position="stacked" class="input-label">Número Exterior</ion-label>
+          <ion-input
+            class="input-field"
+            type="text"
+            required
+            pattern="^[0-9]+$"
+            [(ngModel)]="numExterior"
+            name="numExterior"
+            #numExteriorCtrl="ngModel">
+          </ion-input>
+          <ion-note *ngIf="numExteriorCtrl.invalid && numExteriorCtrl.touched" color="danger">
+            Solo números.
+          </ion-note>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="stacked" class="input-label">Número Interior</ion-label>
+          <ion-input
+            class="input-field"
+            type="text"
+            pattern="^[0-9]*$"
+            [(ngModel)]="numInterior"
+            name="numInterior">
+          </ion-input>
+        </ion-item>
+      </div>
+
+      <ion-item lines="none">
+        <ion-label position="stacked" class="input-label">¿Entre qué calles se encuentra?</ion-label>
+        <ion-input
+          class="input-field"
+          type="text"
+          required
+          [(ngModel)]="entreCalles"
+          name="entreCalles"
+          #entreCallesCtrl="ngModel">
+        </ion-input>
+        <ion-note *ngIf="entreCallesCtrl.invalid && entreCallesCtrl.touched" color="danger">
+          Campo requerido.
+        </ion-note>
+      </ion-item>
+
+      <br>
+      <div class="button-container">
+        <ion-button
+          expand="block"
+          class="save-button"
+          [disabled]="domicilioForm.invalid"
+          (click)="confirmarDomicilio()">
+          Guardar domicilio
+        </ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>

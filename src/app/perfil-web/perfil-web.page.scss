@@ -1,0 +1,310 @@
+ion-content {
+  --background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+  flex-wrap: wrap; /* Permite que los elementos se muevan si no caben */
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.left-section h1 {
+  font-size: 36px;
+  color: #ff4500; /* Color naranja fuerte */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.logout-btn {
+  --background: #eb0000; /* Rojo */
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  max-width: 300px;
+  position: relative;
+  top: -30%;
+  left: 15%;
+  width: 60%;
+  text-transform: none;
+}
+
+.MensajeYboton {
+  position: relative;
+  width: 27%;
+  left: 10%;
+  top: 30%;
+  height: 45%;
+}
+
+.MensajeYboton h1 {
+  color: orange;
+  font-size: 80px;
+  text-align: center;
+}
+
+.profile-container {
+  width: 50%;
+  background: linear-gradient(to bottom, #ffffff, #f2e7ce);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-right: 5px solid orange;
+  border-left: 5px solid orange;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: auto; /* Ajusta la altura automáticamente */
+  margin-left: 45%;
+  margin-top: -21.9%;
+  height: 100%;
+}
+
+.profile-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  width: 80%;
+  color: #000;
+  font-size: 30px;
+}
+
+.profile-info ion-item {
+  width: 80%;
+  color: black;
+  --background: #E6E05E;
+  border-radius: 15px;
+  margin-top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: solid 2px rgb(253, 1, 1);
+  margin-bottom: 20px;
+}
+
+.profile-info ion-input {
+  width: 100%;
+  color: black;
+  --background: transparent;
+  border-radius: 10px;
+}
+
+.profile-info ion-label {
+  display: none;
+}
+
+.info-buttons {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-buttons button {
+  width: 80%;
+  background-color: #f9f3cf;
+  border: 1px solid orange;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+ion-button {
+  border-radius: 20px;
+}
+
+.save-changes-btn {
+  --background: #FA4F10;
+  --background-activated: #FA4F10;
+  --background-hover: #FA4F10;
+  --color: #ffffff;
+  --border-radius: 20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --border-radius: 20px; /* Bordes redondeados */
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border: 2px solid #FA4F10;
+  margin-top: 20px;
+  width: 25%;
+  align-self: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.save-changes-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.upload-avatar-btn {
+  display: none; /* Oculta el input real */
+}
+
+.custom-upload-btn {
+  background-color: #FA4F10; /* Fondo naranja */
+  color: #ffffff; /* Color del texto */
+  font-size: 14px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de puntero */
+  text-align: center; /* Texto centrado */
+  display: inline-block; /* Comportamiento de botón */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra */
+  transition: all 0.2s ease-in-out; /* Animación suave */
+}
+
+.custom-upload-btn:hover {
+  background-color: #E0480E; /* Fondo más oscuro */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25); /* Sombra más fuerte */
+  transform: scale(1.05); /* Ligero agrandado */
+}
+
+/* Media query específica para 851x921 */
+@media (max-width: 1020px) and (min-width: 7px) {
+  ion-content {
+    flex-direction: column; /* Acomoda los elementos en columnas */
+    align-items: center; /* Centra los elementos */
+    padding: 10px; /* Ajusta el espacio interno */
+    height: auto; /* Altura automática según contenido */
+  }
+
+  .MensajeYboton {
+    width: 70%; /* Ajusta el ancho del mensaje */
+    top: 10%; /* Baja la posición para más espacio */
+    left: 15%; /* Centra mejor */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .MensajeYboton h1 {
+    font-size: 70px; /* Reduce el tamaño del mensaje */
+  }
+
+  .profile-container {
+    width: 80%; /* Más espacio para el contenedor del perfil */
+    margin-top: 20%; /* Añade separación */
+    margin-left: 10%; /* Centrado horizontal */
+    height: auto; /* Ajuste automático de altura */
+  }
+
+  .profile-avatar {
+    width: 180px; /* Reduce el tamaño del avatar */
+    height: 180px;
+  }
+
+  .logout-btn {
+    top: 10%; /* Mejora la posición del botón */
+    width: 70%; /* Ajusta el ancho */
+    left: 30%; /* Centra mejor */
+  }
+
+  .info-buttons button {
+    width: 90%; /* Botones más grandes y cómodos */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+  }
+
+  .save-changes-btn {
+    width: 50%; /* Botón más ancho */
+    font-size: 15px; /* Texto ajustado */
+  }
+}
+
+
+@media (min-width: 360px) and (max-width: 720px) {
+  ion-content {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    padding: 10px;
+  }
+
+  .left-section h1 {
+    font-size: 24px; /* Reduce el tamaño del texto */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .logout-btn {
+    font-size: 12px; /* Reduce el tamaño de la fuente */
+    padding: 4px 8px;
+    left: 15%; /* Ajusta la posición */
+    top: 10%;
+    width: 80%;
+  }
+
+  .MensajeYboton {
+    width: 90%; /* Ocupa más espacio en pantallas pequeñas */
+    left: 5%;
+    top: 5%;
+    height: auto;
+  }
+
+  .MensajeYboton h1 {
+    font-size: 50px; /* Reduce el tamaño del texto */
+    text-align: center;
+  }
+
+  .profile-container {
+    width: 90%; /* Ajusta el ancho */
+    margin-left: 5%; /* Centra horizontalmente */
+    margin-top: 0;
+    height: auto; /* Altura automática */
+    padding: 10px; /* Reduce el relleno */
+    margin-top: 20%;
+  }
+
+  .profile-avatar {
+    width: 150px; /* Reduce el tamaño del avatar */
+    height: 150px;
+  }
+
+  .profile-info {
+    font-size: 20px; /* Reduce el tamaño de la fuente */
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  .profile-info ion-item {
+    margin-top: 5%; /* Reduce el margen superior */
+    margin-bottom: 10px; /* Reduce el margen inferior */
+    border: solid 3px rgb(253, 1, 1); /* Reduce el grosor del borde */
+  }
+
+  .info-buttons {
+    margin-top: 10px; /* Reduce el margen superior */
+  }
+
+  .info-buttons button {
+    font-size: 12px; /* Reduce el tamaño del texto */
+    width: 90%; /* Botones más grandes */
+  }
+
+  .save-changes-btn {
+    font-size: 14px; /* Reduce el tamaño del texto */
+    width: 90%; /* Botón más ancho */
+  }
+
+  .custom-upload-btn {
+    font-size: 12px; /* Reduce el tamaño del texto */
+    padding: 8px 16px; /* Ajusta el relleno */
+    border-radius: 6px; /* Reduce los bordes redondeados */
+  }
+}

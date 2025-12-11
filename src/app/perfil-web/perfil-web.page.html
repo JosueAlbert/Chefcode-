@@ -1,0 +1,57 @@
+
+<ion-content>
+
+  <!-- Mensaje de Bienvenida -->
+  
+
+  <!-- Botón de cerrar sesión fuera del cuadro -->
+  <div class="MensajeYboton">
+    <h1>¡Bienvenido!</h1>
+  </div>
+
+
+  <!-- Contenedor del perfil -->
+  <div class="profile-container">
+    <!-- Avatar -->
+    <img [src]="user.avatar" alt="Avatar" class="profile-avatar" />
+        <!-- Subir avatar -->
+    <input 
+  type="file" 
+  (change)="uploadAvatar($event)" 
+  accept="image/*" 
+  class="upload-avatar-btn" 
+  id="file-input"
+  /> 
+    <!-- Botón personalizado que dispara el input -->
+  <label for="file-input" class="custom-upload-btn">
+    Subir archivo
+  </label> 
+
+    <!-- Información del perfil -->
+    <div class="profile-info">
+      <p>Nombre:{{ user.nombre }}</p>
+      <p>Email: {{ user.correo }}</p>
+
+      <!-- Campo de teléfono editable -->
+      <ion-item>
+        <ion-label position="floating">Teléfono</ion-label>
+        <ion-input [(ngModel)]="user.telefono" placeholder="Ingrese su número de teléfono"></ion-input>
+      </ion-item>
+
+      <!-- Campo de cargo editable -->
+      <ion-item>
+        <ion-label position="floating">Cargo</ion-label>
+        <ion-input [(ngModel)]="user.cargo" placeholder="Ingrese su cargo"></ion-input>
+      </ion-item>
+    </div>
+
+    <!-- Botón para guardar cambios -->
+    <ion-button class="guardar"  class="save-changes-btn" (click)="saveChanges()">Guardar cambios</ion-button>
+  </div>
+
+  <ion-button  class="logout-btn" (click)="logout()">Cerrar sesión</ion-button>
+</ion-content>
+
+<ion-footer>
+  <app-sidebar></app-sidebar>
+</ion-footer>

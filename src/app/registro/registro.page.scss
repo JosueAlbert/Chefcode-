@@ -1,0 +1,147 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 16px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.splash-image-small {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.back-button-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #ff5722;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+.input-item {
+  --background: #E3D556; /* Fondo amarillo */
+  margin-bottom: 10px;
+  border-radius: 10px;
+  text-transform: none; /* Para texto en su formato original */
+  color: #000000;
+  --padding-start: 10px; /* Aumenta el padding interno para una mejor apariencia */
+}
+
+.login-button {
+  --background: #ff5722;
+  --background-activated: #e64a19;
+  --background-focused: #ff5722;
+  margin-bottom: 30px;
+  --border-radius: 50px;
+  text-transform: none; /* Para texto en su formato original */
+  color: #fbfeff;
+}
+
+.social-login ion-button {
+  --background: transparent; /* Quita el fondo del botón */
+  --background-activated: transparent; /* Quita el fondo cuando el botón es activado */
+  --box-shadow: none; /* Elimina cualquier sombra del botón */
+  color: inherit; /* Asegura que el color del texto sea adecuado */
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #3b5998;
+  cursor: pointer;
+}
+
+.social-icon[name="logo-google"] {
+  color: #db4437;
+}
+
+/* Media Queries */
+@media (min-width: 576px) {
+  .login-card {
+    padding: 30px;
+  }
+
+  .splash-image-small {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+
+  .login-title {
+    font-size: 28px;
+  }
+
+  .social-login {
+    gap: 20px;
+  }
+
+  .social-icon {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-card {
+    padding: 40px;
+  }
+
+  .splash-image-small {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 40px;
+  }
+
+  .login-title {
+    font-size: 32px;
+  }
+
+  .social-icon {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 992px) {
+  .login-card {
+    padding: 50px;
+  }
+
+  .splash-image-small {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 50px;
+  }
+
+  .login-title {
+    font-size: 36px;
+  }
+
+  .social-icon {
+    font-size: 36px;
+  }
+}

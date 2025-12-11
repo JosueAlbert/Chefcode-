@@ -1,0 +1,36 @@
+<ion-content>
+  <div class="container">
+    <ion-card class="login-card">
+      <!-- Logo -->
+      <img src="https://mateogutierrez.neocities.org/LogoApp.png" alt="Logo pequeño" class="splash-image-small">
+      
+      <!-- Título del formulario -->
+      <ion-title class="login-title">Iniciar sesión</ion-title>
+
+      <!-- Campo de correo electrónico -->
+      <ion-item class="input-item">
+        <ion-input [(ngModel)]="email" type="email" placeholder="Correo electrónico"></ion-input>
+      </ion-item>
+
+      <!-- Campo de contraseña -->
+      <ion-item class="input-item">
+        <ion-input [(ngModel)]="contrasena" type="password" placeholder="Contraseña"></ion-input>
+      </ion-item>
+
+      <!-- Enlace para recuperar contraseña -->
+      <ion-text  (click)="Recuperar()" class="forgot-password" color="medium">¿Olvidaste tu contraseña?</ion-text>
+
+      <!-- Botón de iniciar sesión -->
+      <ion-button expand="block" class="login-button" (click)="loginm()">Iniciar sesión</ion-button>
+
+      <!-- Opciones de inicio de sesión social -->
+      <div class="social-login">
+        <ion-button expand="block" (click)="signInWithGoogle()">
+          <ion-icon name="logo-google" class="social-icon" slot="start"></ion-icon>
+          Iniciar sesión con Google
+        </ion-button>
+       
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

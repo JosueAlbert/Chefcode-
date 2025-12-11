@@ -1,0 +1,42 @@
+<ion-content>
+  <div class="container">
+    <ion-card class="login-card">
+      <!-- Logo -->
+      <img src="https://mateogutierrez.neocities.org/LogoApp.png" alt="Logo pequeño" class="splash-image-small">
+      
+     
+      <!-- Título del formulario -->
+      <ion-title class="login-title">Regístrate</ion-title>
+
+      <!-- Formulario de registro -->
+      <form [formGroup]="registrationForm" (ngSubmit)="register()">
+        <!-- Campo de nombre -->
+        <ion-item class="input-item">
+          <ion-input formControlName="nombre" placeholder="Nombre"></ion-input>
+        </ion-item>
+
+        <!-- Campo de correo electrónico -->
+        <ion-item class="input-item">
+          <ion-input formControlName="email" type="email" placeholder="Correo electrónico"></ion-input>
+        </ion-item>
+
+        <!-- Campo de contraseña -->
+        <ion-item class="input-item">
+          <ion-input formControlName="contrasena" type="password" placeholder="Contraseña"></ion-input>
+        </ion-item>
+
+        <!-- Botón de enviar -->
+        <ion-button expand="block" class="login-button" type="submit">Crear cuenta</ion-button>
+      </form>
+
+      <!-- Opciones de inicio de sesión social -->
+      <div class="social-login">
+        <ion-button expand="block"  (click)="signInWithGoogle()">
+          <ion-icon name="logo-google" class="social-icon" slot="start"></ion-icon>
+          Iniciar sesión con Google
+        </ion-button>
+       
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

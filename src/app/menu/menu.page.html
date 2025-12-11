@@ -1,0 +1,34 @@
+<app-header></app-header>
+
+<ion-content>
+  <!-- Contenedor de opciones -->
+  <div class="options-wrapper">
+    <div class="option" (click)="pedirDomicilio()">
+      <div class="icon-container">
+        <img src="https://mateogutierrez.neocities.org/Domicilio.png" alt="Pedir a domicilio" class="icon" />
+      </div>
+      <p class="option-title">Pedir a domicilio</p>
+    </div>
+    <div class="option" (click)="pickupConsumo()">
+      <div class="icon-container">
+        <img src="https://mateogutierrez.neocities.org/Recoger.png" alt="Pickup / consumir en restaurante" class="icon" />
+      </div>
+      <p class="option-title">Pickup / consumir en restaurante</p>
+    </div>
+  </div>
+
+  <!-- Botón Editado -->
+  <div class="button-container">
+    <button class="custom-button" (click)="elegir()">Elegir productos</button>
+  </div>
+
+  <!-- Mapa -->
+  <div class="map-container">
+    <div id="map"></div>
+  </div>
+</ion-content>
+
+<app-footer></app-footer>
+
+
+

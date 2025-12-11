@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Datos de la entrega</ion-title>
+    <ion-buttons slot="end">
+      <img src="https://mateogutierrez.neocities.org/Logo%20ChefCode.png" alt="Logo" class="logo" />
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Indicador de Progreso -->
+  <div class="progress-indicator">
+    <div class="step completed">
+      <div class="circle"></div>
+      <p>Entrega</p>
+    </div>
+    <div class="line"></div>
+    <div class="step active">
+      <div class="circle"></div>
+      <p>Confirmación</p>
+    </div>
+    <div class="line"></div>
+    <div class="step">
+      <div class="circle"></div>
+      <p>Pago</p>
+    </div>
+  </div>
+
+  <!-- Sección de Información Personal -->
+  <ion-card class="info-section">
+    <ion-card-header class="section-title">
+      <ion-card-title>Información personal</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="info-item">
+        <label>Nombre completo</label>
+        <p class="data-value">{{ nombreCompleto }}</p>
+      </div>
+      <div class="info-item">
+        <label>Dirección de correo electrónico</label>
+        <p class="data-value">{{ correoElectronico }}</p>
+      </div>
+      <div class="info-item">
+        <label>Número de teléfono</label>
+        <p class="data-value">{{ telefono }}</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Sección de Envío a Domicilio -->
+  <div class="choose-address">
+    <ion-button expand="block" color="warning" (click)="agregarDomicilio()">
+      Agregar domicilio
+    </ion-button>
+  </div>
+</ion-content>
+

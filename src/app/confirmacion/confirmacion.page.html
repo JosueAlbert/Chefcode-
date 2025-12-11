@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Confirmación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Mostrar mensaje de estado -->
+  <ion-card *ngIf="message">
+    <ion-card-content>
+      <h2>{{ message }}</h2>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botón de pago si el pedido es aceptado -->
+  <ion-button
+    expand="block"
+    color="primary"
+    *ngIf="mostrarBotonPago"
+    (click)="irAPagar()"
+  >
+    Ir a Pagar
+  </ion-button>
+
+  <!-- Detalles del pedido -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Detalles de la Orden</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h2>Productos:</h2>
+      <ion-list>
+        <ion-item *ngFor="let item of cartItems">
+          <ion-thumbnail slot="start">
+            <img [src]="item.imagenUrl" alt="{{ item.nombre }}" />
+          </ion-thumbnail>
+          <ion-label>
+            <h3>{{ item.nombre }}</h3>
+            <p>Cantidad: {{ item.cantidad }}</p>
+            <h4>Subtotal: {{ (item.precio * item.cantidad) | currency }}</h4>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <h2>Total: {{ total | currency }}</h2>
+      <h2>Datos del Usuario:</h2>
+      <p><strong>Nombre:</strong> {{ userInfo.nombre }}</p>
+      <p><strong>Correo:</strong> {{ userInfo.correo }}</p>
+      <p><strong>Teléfono:</strong> {{ userInfo.telefono }}</p>
+      <h2>Dirección de Entrega:</h2>
+      <p>{{ deliveryInfo.estado }}, {{ deliveryInfo.codigoPostal }}, {{ deliveryInfo.ciudad }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botón para confirmar pedido -->
+  <ion-button expand="block" (click)="confirmarPedido()">Confirmar Pedido</ion-button>
+</ion-content>

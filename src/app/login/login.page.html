@@ -1,0 +1,36 @@
+<ion-header></ion-header>
+<ion-content fullscreen class="ion-padding">
+  <div class="login-container">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <div class="signin-section">
+      <h3 class="signin-title">Bienvenido Administrador</h3>
+      
+      <div class="input-field">
+        <ion-item class="input-item">
+          <ion-label position="floating" class="custom-label"></ion-label>
+          <ion-input
+            placeholder="Agrega tu ID"
+            [(ngModel)]="uid"
+            [type]="showUID ? 'text' : 'password'"
+            required
+          ></ion-input>
+          <ion-icon
+            name="{{ showUID ? 'eye-off' : 'eye' }}"
+            slot="end"
+            (click)="toggleUIDVisibility()"
+          ></ion-icon>
+        </ion-item>
+      </div>
+
+      <button class="animated-btn" (click)="validateUID()">Validar UID</button>
+      <button class="animated-btn" (click)="loginWithGoogle()">Iniciar sesión con Google</button>
+
+      <div class="bottom-particles"></div>
+    </div>
+  </div>
+</ion-content>
